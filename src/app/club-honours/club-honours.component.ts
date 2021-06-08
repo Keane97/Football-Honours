@@ -13,9 +13,8 @@ export class ClubHonoursComponent implements OnInit {
 
   constructor(public englishTeamService: EnglishTeamsService) { }
   ngOnInit() {
-   this.GetSingleEnglishTeam("609993fc87ff34b58723ce9e");
+   this.GetSingleEnglishTeam("6096b14fbf7dc0bb5114f1c5");
   }
-
 
 
   getAllEnglishTeams() {
@@ -27,10 +26,7 @@ export class ClubHonoursComponent implements OnInit {
 
   GetSingleEnglishTeam(_id: string) {
     this.englishTeamService.GetSingleEnglishTeam(_id).subscribe((res)=>{
-      // console.log("The team: "+ res);
-      // const obs = this.englishTeamService.GetSingleEnglishTeam(_id)
       this.teamenglish = res.Team;
-       console.log("The Team Var:" + this.teamenglish);
        console.log("The Team String:" + JSON.stringify(this.teamenglish));
 
     })

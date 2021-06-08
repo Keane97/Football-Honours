@@ -22,6 +22,10 @@
 .PremierLeagues {
   background-color: whitesmoke;
   height: 150px;
+  padding-top: 30px;
+  width:100%;
+  margin: 0 auto;
+  text-align: center;
 }
 
 
@@ -30,7 +34,12 @@
   height: 150px;
 }
 
-.ClubName {
-  display: inline;
-    float: none;
+.Clubname p{
+  font-size: 35px;
+  padding-top: 25px;
+  width:100%;
+  margin: 0 auto;
+  text-align: center;
 }
+
+

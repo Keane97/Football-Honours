@@ -1,17 +1,16 @@
 
 <div class="some-page-wrapper">
   <!-- Start Row 1 -->
-  <button (click)="GetSingleEnglishTeam('609993fc87ff34b58723ce9e')">GetAllTeams</button>
+  <!-- <button (click)="GetSingleEnglishTeam('6096b14fbf7dc0bb5114f1c5')">GetAllTeams</button> -->
   <!-- <button (click)="getAllEnglishTeams()">GetAllTeams</button> -->
   <div class="row">
     <div class="column">
       <div class="PremierLeagues" >
-        <div class="Clubname">
-          <H1>
+        <div *ngIf="teamenglish" class="Clubname">
+          <p>
             {{teamenglish.ClubName}}
-          </H1>
+          </p>
         </div>
-
       </div>
     </div>
     <div class="column">
@@ -39,11 +38,11 @@
       </div>
     </div>
     <div class="column">
-      <div class="PremierLeagues">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, suscipit
-        nulla error nostrum architecto repellat quis laudantium corporis, dolor
-        ad omnis? Atque culpa ullam dignissimos ut sint, reiciendis cumque
-        dolore!
+      <div *ngIf="teamenglish" class="PremierLeagues">
+        <h3>
+          League Titles: {{teamenglish.Honours.LeagueTitles}}
+        </h3>
+        {{teamenglish.Honours.LeagueYearWon}}
       </div>
     </div>
   </div>
@@ -52,10 +51,10 @@
   <div class="row">
     <div class="column">
       <div class="PremierLeagues">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, suscipit
-        nulla error nostrum architecto repellat quis laudantium corporis, dolor
-        ad omnis? Atque culpa ullam dignissimos ut sint, reiciendis cumque
-        dolore!
+        <h3>
+          Champions League Titles: {{teamenglish.Honours.EUCup}}
+        </h3>
+        {{teamenglish.Honours.EUCupYearWon}}
       </div>
     </div>
     <div class="column">
